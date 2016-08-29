@@ -4,7 +4,7 @@ console.log("JavaScript is connected!");
 //A = 65 L = 76 spacebar = 32
  //
 
- // window.onLoad = function() {
+// window.onLoad = function() {
 var finishLine = 1105;
 var startLine = 10;
 var $player1 = $('#player1');
@@ -21,7 +21,7 @@ $('.btn-primary').on('click', function(event) {
           var player1 = $('#player1').css('left');
           // checkPosition($player1);
           if(parseInt($player1.css('left'), 10) > finishLine) {
-            alert("Nice job player 1!");
+            alert("Phew! You made it!");
           }
           }
 
@@ -30,7 +30,8 @@ $('.btn-primary').on('click', function(event) {
       var player2 = $('#player2').css('left');
       // checkPosition($player2);
         if((parseInt($player2.css('left'), 10) > finishLine)) {
-          alert("Nice job player 2!");
+          alert("Better luck next time human!");
+          // document.getElementById("message").innerHTML = "Better luck next time human!";
         }
       }
 
@@ -49,9 +50,3 @@ $('.btn-primary').on('click', function(event) {
 //  }
 // document.addEventListener('keydown', stopDivs)
  // }
-//
-
-//
-//    }
-//  }
-// }
