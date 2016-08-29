@@ -5,7 +5,7 @@ console.log("JavaScript is connected!");
  //
 
  // window.onLoad = function() {
-var finishLine = 1000;
+var finishLine = 1105;
 var startLine = 10;
 var $player1 = $('#player1');
 var $player2 = $('#player2');
@@ -18,23 +18,33 @@ $('.btn-primary').on('click', function(event) {
 
       if (e.keyCode == 65) {
           $('#player1').css('left', '+=10');
-          checkPosition($player1);
+          var player1 = $('#player1').css('left');
+          // checkPosition($player1);
+          if(parseInt($player1.css('left'), 10) > finishLine) {
+            alert("Nice job player 1!");
+          }
           }
 
       if(e.keyCode == 76 ) {
       $('#player2').css('left', '+=10');
-      checkPosition($player2);
+      var player2 = $('#player2').css('left');
+      // checkPosition($player2);
+        if((parseInt($player2.css('left'), 10) > finishLine)) {
+          alert("Nice job player 2!");
+        }
       }
+
  });
 //
 
-function checkPosition($player) {
-  console.log((parseInt($player.css('left'), 10)))
-  if (parseInt($player.css('left'), 10) > finishLine) {
+// function checkPosition($player) {
+//   console.log((parseInt($player.css('left'), 10)))
+//   if (parseInt($player.css('left'), 10) > finishLine) {
 
-    alert("Yay! Crossed finish line!");
-  };
-}
+//     var element = document.getElementById("h2");
+// element.innerHTML = "Nice job"
+//   };
+// }
 
 //  }
 // document.addEventListener('keydown', stopDivs)
